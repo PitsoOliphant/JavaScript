@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+     //Write a program that will print out a star triangle
+     {
+        let star='';
+        for (let index = 0; index <5; index++) 
+        {
+           
+            star+="*";
+            console.log(star);
+        }
+     }
+     console.log("\n");
+     //Write a program that will print out a downside triangle 
+     {
+        let star='';
+        for (let index = 5; index > 0; index--) 
+        {
+            star+='\n'
+            star+="*"
+            if(index===5)
+            {
+                for (let row1 = 0; row1 <5-1; row1++)
+                 {
+                   star+="*"
+                    
+                }
+            }
+            if(index===4)
+            {
+                for (let index = 0; index < 4-1; index++)
+                 {
+                    star+="*"
+                    
+                }
+            }
+            if(index===3)
+            {
+                for (let index = 0; index < 3-1; index++) 
+                {
+                   star+="*"
+                    
+                }
+            }
+         if(index===2)
+         {
+            for (let index = 0; index <2-1; index++) 
+            {
+              star+="*";
+            }
+         }
+          
+        }
+        console.log(star);
+
+
+     }
+//Write a program that will find all the factors of a 100
+{
+    let num=0;
+    for (let index = 1; index <= 100; index++) 
+    {
+       
+       if(100%index===0)
+       {
+        console.log(index+" is a factor");
+       }
+        
+    }
+}
+
+
+    </script>
+</body>
+</html>

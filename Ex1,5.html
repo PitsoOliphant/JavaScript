@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+     //Given the following representation of a matrix, write a program that selects off and even
+     //numbers. The program must use a function that has three arguments. The matrix array, another
+     //another array called odds and the other called evens. Save the numbers in their respective arrays
+           function Numbers(matrix=[],even=[],odd=[])
+            {
+                Matrix.forEach(element => 
+                {
+                    if(element%2===0)
+                    {
+                        even=element;
+                        console.log("Even numbers: "+even);
+                    }
+                    else{odd=element;
+                    
+                        console.log("Odd numbers: "+odd);
+                    }
+                });
+
+           }
+           let Matrix=[[19,23,29],[23,15,7],[11,13,17]]
+           let evenNumbers=[];
+           let oddNumbers=[];
+           Numbers(Matrix,evenNumbers,oddNumbers)
+/*Without using the length property, create a program that counts the number of items in an array*/
+        {
+            let number=[1,11,1,1,1,1,1,1]
+            let count=0
+          number.forEach(element =>
+           {
+            count+=1
+            console.log(count);
+          });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+</head>
+<body>
+   <!-- 
+    You have been tasked to help a local food store.
+    The store sells chips,fruits,chocolate and drinks.
+    They want to measure how much the are selling from Mon to Fri.
+    *Create two arrays:
+        *one for the days of the week.
+        *One for the food items sold by the store.
+    Loop through both to and generate a prompt to get the values sold per day.
+    For each day create an object to store the values.
+    Store these objects into an array.
+    Use loops to access and display everthing
+    Using DOM create a table and all its necessary elements.
+    Populate this table with the information stored on the daily sales of the store.
+    
+    -->
+    
+   <table>
+    <tr>
+       <th></th>
+       <th></th>
+       <th></th>
+       <th></th>
+       <th></th>
+       <th></th>
+    </tr>
+    <tr>
+        <td id="Monday">
+           
+        </td>
+        <td id="M_Chips"></td>
+        <td id="M_Fruits"></td>
+        <td id="M_Chocolate"></td>
+        <td id="M_Drinks"></td>
+    </tr>
+    <tr>
+        <td id="Tuesday">
+           
+        </td>
+        <td id="T_Chips"></td>
+        <td id="T_Fruits"></td>
+        <td id="T_Chocolate"></td>
+        <td id="T_Drinks"></td>
+    </tr>
+    <tr>
+        <td id="Wednesday">
+          
+        </td>
+        <td id="W_Chips"></td>
+        <td id="W_Fruits"></td>
+        <td id="W_Chocolate"></td>
+        <td id="W_Drinks"></td>
+    </tr>
+    <tr>
+        <td id="Thursday">
+           
+        </td>
+        <td id="TH_Chips"></td>
+        <td id="TH_Fruits"></td>
+        <td id="TH_Chocolate"></td>
+        <td id="TH_Drinks"></td>
+    </tr>
+    <tr>
+        <td id="Friday">
+           
+        </td>
+        <td id="F_Chips"></td>
+        <td id="F_Fruits"></td>
+        <td id="F_Chocolate"></td>
+        <td id="F_Drinks"></td>
+    </tr>
+   </table> 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+   
+    
+                    <script>
+                       let DaysOfTheWeek=['Monday',"Tuesday","Wednesday","Thursday","Friday"];
+                         let stock=['Chips','fruits','Chocolate','Drinks'];
+                        let Monday={};
+                        let Tuesday={};
+                        let Wednesday={};
+                        let Thursday={};
+                        let Friday={};
+                        let WeeklySales=[];
+                       for (const Days of DaysOfTheWeek) 
+                       {
+                           for (const items of stock)
+                           {
+                               let ask=prompt(`How many ${items} were sold on ${Days}`);
+                               parseInt(ask)
+                              if(ask>-1)
+                              {
+                                 if(Days==='Monday')
+                                 {
+                                Monday[items]=ask;
+                                document.getElementById("M_Chips").innerHTML=ask
+                                document.getElementById("M_Fruits").innerText=ask
+                                document.getElementById("M_Chocolate").innerHTML=ask
+                                document.getElementById("M_Drinks").innerHTML=ask
+                                 }
+                                if (Days==='Tuesday')
+                                 {
+                                Tuesday[items]=ask;
+                                document.getElementById("T_Chips").innerHTML=ask;
+                                document.getElementById("T_Fruits").innerHTML=ask;
+                                document.getElementById("T_Chocolate").innerHTML=ask;
+                                document.getElementById("T_Drinks").innerHTML=ask;
+                               
+                                 }
+                                if(Days==='Wednesday')
+                                {
+                                Wednesday[items]=ask;
+                                document.getElementById("W_Chips").innerHTML=ask;
+                                document.getElementById("W_Fruits").innerHTML=ask;
+                                document.getElementById("W_Chocolate").innerHTML=ask;
+                                document.getElementById("W_Drinks").innerHTML=ask;
+                                }
+                                if(Days==='Thursday')
+                                {
+                                Thursday[items]=ask;
+                                document.getElementById("TH_Chips").innerHTML=ask
+                                document.getElementById("TH_Fruits").innerHTML=ask
+                                document.getElementById("TH_Chocolate").innerHTML=ask
+                                document.getElementById("TH_Drinks").innerHTML=ask
+                                }
+                                if(Days==='Friday')
+                                {
+                                Friday[items]=ask;
+                                document.getElementById("F_Chips").innerHTML=ask;
+                                document.getElementById("F_Fruits").innerHTML=ask;
+                                document.getElementById("F_Chocolate").innerHTML=ask;
+                                document.getElementById("F_Drinks").innerHTML=ask;
+                                }
+                                
+                              }
+                             else
+                                {
+                                alert("Invalid entry");
+                                break;
+                                }
+                            }
+                        }
+                        WeeklySales.push(Monday);
+                        WeeklySales.push(Tuesday);
+                        WeeklySales.push(Wednesday);
+                        WeeklySales.push(Thursday);
+                        WeeklySales.push(Friday);
+                        console.log(WeeklySales);
+                        let MondayValues=[]
+                       MondayValues.push(Object.values(Monday))
+                       console.log("Monday values "+MondayValues);
+                       
+                           
+                   
+                      
+                        document.getElementsByTagName("th")[0].innerHTML="Day"
+                 for (let index = 0; index < stock.length; index++) 
+                 {
+                   document.getElementsByTagName("th")[index+1].innerHTML=stock[index]
+                     
+                 }
+                
+                     document.getElementById("Monday").innerHTML=DaysOfTheWeek[0]
+                     document.getElementById("Tuesday").innerHTML=DaysOfTheWeek[1]
+                     document.getElementById("Wednesday").innerHTML=DaysOfTheWeek[2]
+                     document.getElementById("Thursday").innerHTML=DaysOfTheWeek[3]
+                     document.getElementById("Friday").innerHTML=DaysOfTheWeek[4]
+                
+                        </script>
+                
+</body>
+</html>

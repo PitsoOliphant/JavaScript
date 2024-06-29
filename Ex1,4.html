@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Create a program to terminate an infinite loop.Do no use a break or a return statement
+        //The loop must be terminated if it has run n amount of times where n is a argument for a function
+        {
+            function Loop(params)
+            {
+                while(params>0)
+                {
+                    console.log("loop");
+                }
+         
+            }
+            Loop(-1)
+        }
+
+//Write a program that draws an n*m multiplication table, where n and m is an argument for a function
+        {
+
+           function TimeTable(num1,num2)
+           
+           {
+            for (let outer = 1; outer <=num1; outer++) {
+                let product=outer*num2;
+              console.log(outer+"*"+num2+"="+product);
+            }
+           }
+           TimeTable(10,2)
+        }
+//Wrtie a well commented program that demonstrates what callbacks are
+        {
+            function Calculator(num1,num2,operation) 
+            {
+                console.log(operation(num1,num2));
+            }
+            function Add(a,b) 
+            {
+                return(a+b)
+            }    
+            function Minus(a,b) 
+            {
+                return(a-b);    
+            }
+            function Divide(x,y)
+             {
+             return x/y   
+            }
+            function Product(x,y)
+             {
+             return x*y   
+            }
+            Calculator(5,5,Add)
+        }
+       
+    </script>
+</body>
+</html>
